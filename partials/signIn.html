@@ -4,7 +4,7 @@
 <h2>Sign In</h2>
 
     <ul>
-        <li ng-repeat='item in students'>
+        <li ng-repeat='item in students | filter: {attendance: false}'>
             <p><em>{{item.name}}</em><span class='glyphicon glyphicon-circle-arrow-right'></span>
 
 	            <span ng-click="SignOut = true" ng-hide="SignOut">
@@ -16,4 +16,16 @@
 
             </p>
         </li>
+    </ul>
+
+
+
+    <ul>
+    	<li ng-repeat='item in students | filter: {attendance: true}'>
+    	{{item.name}} <span class='glyphicon glyphicon-circle-arrow-right'></span> 	              
+    	<a ng-click="signOut(item)"><span class='btn btn-warning'>Sign Out</span></a>
+
+    	</li>
+
+
     </ul>
