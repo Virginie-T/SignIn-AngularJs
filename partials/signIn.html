@@ -1,0 +1,19 @@
+<header style='color: steelblue'><a ui-sref='home'>Home</a> | <a ui-sref='list'>Who's here</a></header>
+
+
+<h2>Sign In</h2>
+
+    <ul>
+        <li ng-repeat='item in students'>
+            <p><em>{{item.name}}</em><span class='glyphicon glyphicon-circle-arrow-right'></span>
+
+	            <span ng-click="SignOut = true" ng-hide="SignOut">
+	              <a ng-click="signIn(item)"><span class='btn btn-success'>Sign In</span></a>
+	            </span>
+	            <span class="form-group" ng-show="SignOut" ng-submit="SignOut = false">
+	               <a ng-click="signOut(item)"><span class='btn btn-warning'>Sign Out</span></a>
+	            </span>
+
+            </p>
+        </li>
+    </ul>

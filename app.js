@@ -7,4 +7,16 @@ SignIn.config(function($stateProvider) {
         controller: 'StudentsCtrl'
     });
 
+    $stateProvider.state('list', {
+        url: '/list_of_student',
+        templateUrl: 'partials/list.html',
+        controller: 'StudentsCtrl'
+    });
+
+    $stateProvider.state('signIn', {
+        url: '/sign_in',
+        templateUrl: 'partials/signIn.html',
+        controller: 'StudentsCtrl'
+    });
+
 });

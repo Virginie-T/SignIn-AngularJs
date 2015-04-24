@@ -1,0 +1,21 @@
+<header style='color: steelblue'><a ui-sref='home'>Home</a> | <a ui-sref='signIn'>Sign In</a></header>
+
+<h2>List of all the students</h2>
+
+<div ng-show='students.length'>
+	<h3>Present Students :</h3>
+    <ul>
+        <li ng-repeat='item in students | filter: {attendance: true}'>
+            <p><em>{{item.name}}</em></p>
+        </li>
+    </ul>
+</div>
+
+<div ng-show='students.length'>
+	<h3>Absent Students :</h3>
+    <ul>
+        <li ng-repeat='item in students | filter: {attendance: false}'>
+            <p><em>{{item.name}}</em></p>
+        </li>
+    </ul>
+</div>
