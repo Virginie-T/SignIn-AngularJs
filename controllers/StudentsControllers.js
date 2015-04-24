@@ -6,6 +6,8 @@ SignIn.controller('StudentsCtrl', function StudentsCtrl($scope, StudentsFactory)
   	item.attendance = true;
   }
 
-  
+    $scope.signOut = function(item) {
+  	item.attendance = false;
+  }
 
 });
